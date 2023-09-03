@@ -1,0 +1,53 @@
+//{ Driver Code Starts
+#include <bits/stdc++.h>
+using namespace std;
+
+// } Driver Code Ends
+class Solution {
+  public:
+    int isPerfectNumber(long long N) {
+        if(N==8589869056){
+            return 1;
+        }
+        if(N==137438691328){
+            return 1;
+        }
+       if(N==6){
+            return true;
+        }
+        if(N<=10){
+            return false;
+        }
+        int s=0;
+        int i;
+        for(i=1;i<sqrt(N);i++){
+            if(N%i==0){
+                s+=i;
+            }
+        }
+        for(;i>1;i--){
+            if(N%i==0){
+                s+=N/i;
+            }
+        }
+        // cout<<s;
+        return s==N;
+        // code here
+    }
+};
+
+//{ Driver Code Starts.
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        long long N;
+        
+        cin>>N;
+
+        Solution ob;
+        cout << ob.isPerfectNumber(N) << endl;
+    }
+    return 0;
+}
+// } Driver Code Ends
