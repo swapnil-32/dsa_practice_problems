@@ -15,14 +15,16 @@ class Solution
             return 0;
         }
         // int a=
-        return (josephus(n-1,k)+k-1)%n;
+        // else{
+        return (jos(n-1,k)+k)%n;
+        // }
         
     }
     int josephus(int n, int k)
     {
-        int ans=jos(n,k);
+        // int ans=jos(n,k);
         // cout<<ans;
-        return ans+1;
+        return jos(n,k)+1;
        //Your code here
     }
 };
