@@ -14,8 +14,8 @@ class Solution
         if(n==1){
             return 0;
         }
-        int a=(josephus(n-1,k)+k-1)%n;
-        return a;
+        // int a=
+        return (josephus(n-1,k)+k-1)%n;
         
     }
     int josephus(int n, int k)
