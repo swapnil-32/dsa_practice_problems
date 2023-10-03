@@ -10,7 +10,7 @@ class Solution{
     string colName (long long int n)
     {
         string ans="";
-        while(n>26){
+        while(n>0){
             int r=n%26;
             if(r==0){
                 ans.push_back('Z');
@@ -23,7 +23,7 @@ class Solution{
             }
        
         }
-        ans.push_back('A'+n-1);
+        // ans.push_back('A'+n-1);
         reverse(ans.begin(),ans.end());
         return ans;
         // your code here
