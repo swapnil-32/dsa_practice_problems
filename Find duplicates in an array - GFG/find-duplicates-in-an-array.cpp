@@ -5,20 +5,20 @@ using namespace std;
 // } Driver Code Ends
 class Solution{
   public:
-    vector<int> duplicates(int arr[], int n) {
-        map<int,int>m;
-        vector<int>ans;
-        for(int i=0;i<n;i++){
-           m[arr[i]]++;
+    vector<int> duplicates(long long arr[], int n) {
+        vector<int>freq(n),ans;
+        
+        for (int i = 0; i < n; i++){
+            freq[arr[i]]++;
         }
-        for(auto i:m){
-            if(i.second>1){
-                ans.push_back(i.first);
+        
+        for (int i = 0; i < freq.size(); i++){
+            if (freq[i] > 1){
+                ans.push_back(i);
             }
         }
-        if(ans.size()){
-            return ans;
-        }
+        if (ans.size()) return ans;
+        
         return {-1};
         // code here
     }
@@ -32,7 +32,7 @@ int main() {
     while (t-- > 0) {
         int n;
         cin >> n;
-        int a[n];
+        long long a[n];
         for (int i = 0; i < n; i++) cin >> a[i];
         Solution obj;
         vector<int> ans = obj.duplicates(a, n);
