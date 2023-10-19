@@ -10,7 +10,7 @@ class Solution{
     // a: input array
     // n: size of array
     int equilibriumPoint(long long a[], int n) {
-    long long s=0;
+         long long s=0;
     for(int i=0;i<n;i++){
         s+=a[i];
     }
@@ -23,6 +23,7 @@ class Solution{
         lsum+=a[i];
     }
     return -1;
+    
         // Your code here
     }
 
